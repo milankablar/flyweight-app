@@ -14,10 +14,12 @@
             "country_code": "1"
           },
           "state": {
-            "name": "Wisconsin"
+            "name": "Wisconsin",
+            "abbr": "WI"
           },
           "city": {
-            "name": "Milwaukee"
+            "name": "Milwaukee",
+            "zip_code": "53202"
           }
         },
         "vehicle": {
@@ -34,15 +36,15 @@
         "location": {
           "country": {
             "name": "United States",
-            "iso_code": "US",
-            "country_code": "1"
+            "iso_code": "US"
           },
           "state": {
             "name": "Wisconsin",
             "abbr": "WI"
           },
           "city": {
-            "name": "Milwaukee"
+            "name": "Milwaukee",
+            "zip_code": "53202"
           }
         },
         "vehicle": {
