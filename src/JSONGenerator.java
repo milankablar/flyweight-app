@@ -42,26 +42,27 @@ public class JSONGenerator {
 
             sb.append("{\n" +
                     "        \"id\": 1,\n" +
-                    "        \"last_name\": \"" + lastName +"\",\n" +
-                    "        \"first_name\": \""+firstName+"\",\n" +
-                    "        \"phone_number\": \""+phoneNumber+"\",\n" +
+                    "        \"last_name\": \"LastName\",\n" +
+                    "        \"first_name\": \"FirstName\",\n" +
+                    "        \"phone_number\": \"1234567890\",\n" +
                     "        \"location\": {\n" +
                     "          \"country\": {\n" +
-                    "            \"name\": \""+countryName+"\",\n" +
-                    "            \"iso_code\": \""+countryISO+"\",\n" +
-                    "            \"country_code\": \""+countryCode+"\"\n" +
+                    "            \"name\": \"United States\",\n" +
+                    "            \"iso_code\": \"US\"\n" +
                     "          },\n" +
-                    "          \"province\": {\n" +
-                    "            \"name\": \""+province+"\"\n" +
+                    "          \"state\": {\n" +
+                    "            \"name\": \"Wisconsin\",\n" +
+                    "            \"abbr\": \"WI\"\n" +
                     "          },\n" +
                     "          \"city\": {\n" +
-                    "            \"name\": \""+city+"\"\n" +
+                    "            \"name\": \"Milwaukee\",\n" +
+                    "            \"zip_code\": \"53202\"\n" +
                     "          }\n" +
                     "        },\n" +
                     "        \"vehicle\": {\n" +
-                    "          \"make\": \""+vehicleMake+"\",\n" +
-                    "          \"model\": \""+vehicleModel+"\",\n" +
-                    "          \"year\": \""+vehicleYear+"\"\n" +
+                    "          \"make\": \"Ford\",\n" +
+                    "          \"model\": \"Escape\",\n" +
+                    "          \"year\": \"2020\"\n" +
                     "        }\n" +
                     "      },")
         }
