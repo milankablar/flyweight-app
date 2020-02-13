@@ -1,6 +1,5 @@
 {
-  "status": "",
-
+  "status": "success",
   "data": {
     "posts": [
       {
@@ -39,7 +38,8 @@
             "country_code": "1"
           },
           "state": {
-            "name": "Wisconsin"
+            "name": "Wisconsin",
+            "abbr": "WI"
           },
           "city": {
             "name": "Milwaukee"
