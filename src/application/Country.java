@@ -17,24 +17,12 @@ package application;
  */
 public class Country {
     private String name;
-    private String isoCode;
-    private String countryCode;
 
     public Country(String name, String isoCode, String countryCode) {
         this.name = name;
-        this.isoCode = isoCode;
-        this.countryCode = countryCode;
     }
 
     public String getName() {
         return name;
-    }
-
-    public String getIsoCode() {
-        return isoCode;
-    }
-
-    public String getCountryCode() {
-        return countryCode;
     }
 }
