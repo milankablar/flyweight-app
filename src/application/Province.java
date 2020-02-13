@@ -1,6 +1,6 @@
 package application;
 
-public class Province {
+public class Province implements Field{
     private String name;
     private String abbr;
 
@@ -15,5 +15,9 @@ public class Province {
 
     public String getAbbr(){
         return abbr;
+    }
+
+    public String toString(){
+        return "province:" +name;
     }
 }

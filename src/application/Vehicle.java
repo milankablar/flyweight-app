@@ -15,7 +15,7 @@ package application;
  * @author dupontn
  * @version created on 2/12/2020 at 2:20 PM
  */
-public class Vehicle {
+public class Vehicle implements Field{
     private String model;
     private String year;
 

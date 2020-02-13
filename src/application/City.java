@@ -1,6 +1,6 @@
 package application;
 
-public class City {
+public class City implements Field{
     private String cityName;
     private String zipCode;
     private String addOn;
