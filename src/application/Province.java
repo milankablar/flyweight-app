@@ -1,10 +1,10 @@
 package application;
 
-public class Providence {
+public class Province {
     private String name;
     private String abbr;
 
-    public Providence(String name, String abbr){
+    public Province(String name, String abbr){
         this.name = name;
         this.abbr = abbr;
     }
