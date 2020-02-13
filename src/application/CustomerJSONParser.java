@@ -20,31 +20,27 @@ import java.io.*;
 public class CustomerJSONParser {
     private File jsonFile;
     private String fileData;
+    private BufferedReader bf;
 
-    public CustomerJSONParser(File jsonFile) {
+    public CustomerJSONParser(File jsonFile) throws FileNotFoundException {
         this.jsonFile = jsonFile;
+        bf = new BufferedReader(new FileReader(jsonFile));
     }
 
     public void parseStatus() {
-        BufferedReader bufferedReader;
-        try {
-            bufferedReader = new BufferedReader(new FileReader(jsonFile));
 
-            String st = bufferedReader.readLine();
-            System.out.println(st);
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getClass());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     public static void main(String[] args) {
-        File file = new File("file:response.json");
+        File file = new File("src/resources/response.json");
+        CustomerJSONParser customerJSONParser;
 
-        CustomerJSONParser customerJSONParser = new CustomerJSONParser(file);
+        try {
+            customerJSONParser = new CustomerJSONParser(file);
+            customerJSONParser.parseStatus();
 
-        customerJSONParser.parseStatus();
-        customerJSONParser.parseStatus();
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getClass());
+        }
     }
 }
