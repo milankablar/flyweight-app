@@ -25,7 +25,12 @@ public class Customer {
 
     public Customer(int id, String firstName, String lastName, String phone,
                     Country country, Vehicle vehicle) {
-
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phone = phone;
+        this.country = country;
+        this.vehicle = vehicle;
     }
 
     public int getId() {
