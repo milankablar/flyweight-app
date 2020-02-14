@@ -5,10 +5,8 @@ public class City implements Field{
     private String zipCode;
     private String addOn;
 
-    public City(String cityName, String zipCode, String addOn){
+    public City(String cityName){
         this.cityName = cityName;
-        this.zipCode = zipCode;
-        this.addOn = addOn;
     }
 
     public String getCityName() {
@@ -22,4 +20,13 @@ public class City implements Field{
     public String getAddOn() {
         return addOn;
     }
+
+    public void setZipCode(String zipCode){
+        this.zipCode = zipCode;
+    }
+
+    public void setAddOn(String addOn){
+        this.addOn = addOn;
+    }
 }
+

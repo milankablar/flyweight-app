@@ -15,7 +15,13 @@ public class FieldFactory {
      * @return
      */
     public static Field getCity(String name){
+        City city = (City)cityMap.get(name);
 
+        if(city == null) {
+            city = new City(name);
+            cityMap.put(name, city);
+        }
+        return city;
     }
 
     /**
@@ -24,7 +30,13 @@ public class FieldFactory {
      * @return
      */
     public static Field getCountry(String name){
+        Country country = (Country)countryMap.get(name);
 
+        if(country == null) {
+            country = new Country(name);
+            countryMap.put(name, country);
+        }
+        return country;
     }
 
     /**
@@ -33,15 +45,30 @@ public class FieldFactory {
      * @return
      */
     public static Field getProvince(String name){
+        Province province = (Province)provinceMap.get(name);
 
+        if(province == null) {
+            province = new Province(name);
+            provinceMap.put(name, province);
+        }
+        return province;
     }
 
     /**
-     * Factory for Vehicle objects
+     *
+     * @param make
      * @param modelName
+     * @param year
      * @return
      */
     public static Field getVehicle(String make, String modelName, String year){
+        String fullVehicleString = make + modelName + year;
+        Vehicle vehicle = (Vehicle)vehicleMap.get(fullVehicleString);
 
+        if(vehicle == null){
+            vehicle = new Vehicle(make, modelName, year);
+            vehicleMap.put(fullVehicleString, vehicle);
+        }
+        return vehicle;
     }
 }
