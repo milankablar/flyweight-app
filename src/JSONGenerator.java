@@ -16,7 +16,7 @@ public class JSONGenerator {
         ArrayList<String> countryNames = new ArrayList<>(
                 Arrays.asList("China","India","United States","Mexico","Brazil","Russia","Germany","France","Italy","Poland"));
         ArrayList<String> provinceNames = new ArrayList<>(
-                Arrays.asList(new ArrayList("California", ),"India","United States","Mexico","Brazil","Russia","Germany","France","Italy","Poland"));
+                Arrays.asList("California","India","United States","Mexico","Brazil","Russia","Germany","France","Italy","Poland"));
 
         PrintWriter out = new PrintWriter(new FileWriter("response.json"));
         StringBuilder sb = new StringBuilder("{\n" +
@@ -64,7 +64,7 @@ public class JSONGenerator {
                     "          \"model\": \"Escape\",\n" +
                     "          \"year\": \"2020\"\n" +
                     "        }\n" +
-                    "      },")
+                    "      },");
         }
     }
 }
