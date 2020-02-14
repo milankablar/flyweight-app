@@ -2,7 +2,7 @@
  * Course: SE2811-051
  * Winter 2019-2020
  * Country - Final Presentation
- * Name: Nathan DuPont
+ * Name: Nathan DuPont, Jonas Cira, Milan Kablar
  * Created: 2/12/2020
  */
 
