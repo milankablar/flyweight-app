@@ -16,7 +16,7 @@ public class JSONGenerator {
         ArrayList<String> countryNames = new ArrayList<>(
                 Arrays.asList("China","India","United States","Mexico","Brazil","Russia","Germany","France","Italy","Poland"));
         ArrayList<String> provinceNames = new ArrayList<>(
-                Arrays.asList("California","India","United States","Mexico","Brazil","Russia","Germany","France","Italy","Poland"));
+                Arrays.asList(["Gansu","Fujian","Henan"],["Bihar","Goa","Assam"],["California","Illinois","Wisconsin"],["Mexico"],"Brazil","Russia","Germany","France","Italy","Poland"));
 
         PrintWriter out = new PrintWriter(new FileWriter("response.json"));
         StringBuilder sb = new StringBuilder("{\n" +
@@ -31,9 +31,11 @@ public class JSONGenerator {
             String phoneNumber;
             String countryName;
             String countryISO;
-            String countryCode;
             String province;
-            String city;
+            String cityName;
+            String cityZip;
+            String stateName;
+            String stateAbbr;
             String vehicleMake;
             String vehicleModel;
             String vehicleYear;
@@ -42,27 +44,27 @@ public class JSONGenerator {
 
             sb.append("{\n" +
                     "        \"id\": 1,\n" +
-                    "        \"last_name\": \"LastName\",\n" +
-                    "        \"first_name\": \"FirstName\",\n" +
-                    "        \"phone_number\": \"1234567890\",\n" +
+                    "        \"last_name\": \""+lastName+"\",\n" +
+                    "        \"first_name\": \""+firstName+"\",\n" +
+                    "        \"phone_number\": \""+phoneNumber+"\",\n" +
                     "        \"location\": {\n" +
                     "          \"country\": {\n" +
-                    "            \"name\": \"United States\",\n" +
-                    "            \"iso_code\": \"US\"\n" +
+                    "            \"name\": \""+countryName+"\",\n" +
+                    "            \"iso_code\": \""+countryISO+"\"\n" +
                     "          },\n" +
                     "          \"state\": {\n" +
-                    "            \"name\": \"Wisconsin\",\n" +
-                    "            \"abbr\": \"WI\"\n" +
+                    "            \"name\": \""+stateName+"\",\n" +
+                    "            \"abbr\": \""+stateAbbr+"\"\n" +
                     "          },\n" +
                     "          \"city\": {\n" +
-                    "            \"name\": \"Milwaukee\",\n" +
-                    "            \"zip_code\": \"53202\"\n" +
+                    "            \"name\": \""+cityName+"\",\n" +
+                    "            \"zip_code\": \""+cityZip+"\"\n" +
                     "          }\n" +
                     "        },\n" +
                     "        \"vehicle\": {\n" +
-                    "          \"make\": \"Ford\",\n" +
-                    "          \"model\": \"Escape\",\n" +
-                    "          \"year\": \"2020\"\n" +
+                    "          \"make\": \""+vehicleMake+"\",\n" +
+                    "          \"model\": \""+vehicleModel+"\",\n" +
+                    "          \"year\": \""+vehicleYear+"\"\n" +
                     "        }\n" +
                     "      },");
         }
