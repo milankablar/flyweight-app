@@ -19,6 +19,10 @@ package application;
 public class Country implements Field {
     private String name;
 
+    /**
+     * Constructor for a Country object, only assigns the name initially, other properties are assigned later
+     * @param name name of country
+     */
     public Country(String name) {
         this.name = name;
     }

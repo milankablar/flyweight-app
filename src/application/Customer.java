@@ -23,9 +23,23 @@ public class Customer {
     private Country country;
     private Vehicle vehicle;
 
+    /**
+     * Constructor for Customer object
+     * @param id id of customer
+     * @param firstName first name of customer
+     * @param lastName last name of customer
+     * @param phone phone number of customer
+     * @param country country of customer
+     * @param vehicle vehicle that customer purchased
+     */
     public Customer(int id, String firstName, String lastName, String phone,
                     Country country, Vehicle vehicle) {
-
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phone = phone;
+        this.country = country;
+        this.vehicle = vehicle;
     }
 
     public int getId() {

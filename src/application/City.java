@@ -20,6 +20,10 @@ public class City implements Field{
     private String zipCode;
     private String addOn;
 
+    /**
+     * Constructor for a City object, only assigns the name initially, other properties are assigned later
+     * @param cityName name of city
+     */
     public City(String cityName){
         this.cityName = cityName;
     }

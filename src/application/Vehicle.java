@@ -20,6 +20,12 @@ public class Vehicle implements Field{
     private String model;
     private String year;
 
+    /**
+     * Constructor for a Vehicle object
+     * @param make make of car
+     * @param model model of car
+     * @param year year of car
+     */
     public Vehicle(String make, String model, String year) {
         this.make = make;
         this.model = model;
