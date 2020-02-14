@@ -17,7 +17,14 @@ public class JSONGenerator {
         ArrayList<String> countryNames = new ArrayList<>(
                 Arrays.asList("China","India","United States","Mexico","Brazil","Russia","Germany","France","Italy","Poland"));
         ArrayList<String> provinceNames = new ArrayList<>(
-                Arrays.asList(["Gansu","Fujian","Henan"],["Bihar","Goa","Assam"],["California","Illinois","Wisconsin"],["Mexico"],"Brazil","Russia","Germany","France","Italy","Poland"));
+                Arrays.asList(["Gansu","Fujian","Henan"],["Bihar","Goa","Assam"],["California","Illinois","Wisconsin"],["Campeche","Guerrero","Sonora"],["Para","Amapa","Bahia"],["Moscow","Vladmi","Penza"],["Bavaria","Saarland","Hamburg"],["Normandy","Picardy","Brittany"],["Asti","Bari","Grosseto"],["Opole","Masovia","Lubusz"]));
+        ArrayList<String> cityNames = new ArrayList<>(
+                Arrays.asList("Jonastown","Nathantopia","Milanville");
+        ArrayList<String> vehicleMakes = new ArrayList<>(
+                Arrays.asList("Ford","Chevy","Toyota","Nissan","Lincoln","Honda","Dodge","Volkswagen","Fiat","Tesla"));
+        ArrayList<String> vehicleModels = new ArrayList<>(
+                Arrays.asList("Mustang","Silverado","Camry","Skyline GTR","MKZ","Civic","Challenger","Beetle","500","Roadster"));
+
 
         PrintWriter out = new PrintWriter(new FileWriter("response.json"));
         StringBuilder sb = new StringBuilder("{\n" +
@@ -35,8 +42,7 @@ public class JSONGenerator {
             String province;
             String cityName;
             String cityZip;
-            String stateName;
-            String stateAbbr;
+            String provinceName;
             String vehicleMake;
             String vehicleModel;
             String vehicleYear;
@@ -54,8 +60,8 @@ public class JSONGenerator {
                     "            \"iso_code\": \""+countryISO+"\"\n" +
                     "          },\n" +
                     "          \"state\": {\n" +
-                    "            \"name\": \""+stateName+"\",\n" +
-                    "            \"abbr\": \""+stateAbbr+"\"\n" +
+                    "            \"name\": \""+provinceName+"\",\n" +
+                    "            \"abbr\": \""+provinceAbbr+"\"\n" +
                     "          },\n" +
                     "          \"city\": {\n" +
                     "            \"name\": \""+cityName+"\",\n" +
