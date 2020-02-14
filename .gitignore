@@ -3,6 +3,8 @@
 out/
 *.iml
 
+!dependencies
+
 # Compiled class file
 *.class
 

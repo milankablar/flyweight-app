@@ -66,7 +66,7 @@ public class JSONGenerator {
                     "          \"model\": \""+vehicleModel+"\",\n" +
                     "          \"year\": \""+vehicleYear+"\"\n" +
                     "        }\n" +
-                    "      },")
+                    "      },");
         }
     }
 }
