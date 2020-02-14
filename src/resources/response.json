@@ -6,45 +6,17 @@
         "id": 1,
         "last_name": "LastName",
         "first_name": "FirstName",
+        "email": "lastName_firstName@gmail.com",
         "phone_number": "1234567890",
         "location": {
           "country": {
-            "name": "United States",
-            "iso_code": "US",
-            "country_code": "1"
+            "name": "United States"
           },
           "state": {
-            "name": "Wisconsin",
-            "abbr": "WI"
+            "name": "Wisconsin"
           },
           "city": {
-            "name": "Milwaukee",
-            "zip_code": "53202"
-          }
-        },
-        "vehicle": {
-          "make": "Ford",
-          "model": "Escape",
-          "year": "2020"
-        }
-      },
-      {
-        "id": 1,
-        "last_name": "LastName",
-        "first_name": "FirstName",
-        "phone_number": "1234567890",
-        "location": {
-          "country": {
-            "name": "United States",
-            "iso_code": "US"
-          },
-          "state": {
-            "name": "Wisconsin",
-            "abbr": "WI"
-          },
-          "city": {
-            "name": "Milwaukee",
-            "zip_code": "53202"
+            "name": "Milwaukee"
           }
         },
         "vehicle": {

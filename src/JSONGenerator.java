@@ -4,6 +4,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+// https://howtodoinjava.com/library/json-simple-read-write-json-examples/
 public class JSONGenerator {
     public static void main(String[] args) throws IOException {
 
