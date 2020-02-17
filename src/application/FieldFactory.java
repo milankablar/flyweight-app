@@ -1,7 +1,22 @@
+/*
+ * Course: SE2811-051
+ * Winter 2019-2020
+ * FieldFactory - Final Presentation
+ * Name: Nathan DuPont, Jonas Cira, Milan Kablar
+ * Created: 2/12/2020
+ */
+
 package application;
 
 import java.util.HashMap;
 
+/**
+ * SE2811-051 Winter 2019-2020
+ * FieldFactory purpose:
+ *
+ * @author ciraj
+ * @version created on 2/12/2020 at 2:18 PM
+ */
 public class FieldFactory {
     // initializes the HashMaps that will work with the factories to limit memory use
     private static final HashMap cityMap = new HashMap();

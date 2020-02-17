@@ -1,9 +1,9 @@
 /*
  * Course: SE2811-051
  * Winter 2019-2020
- * CustomerFactory - Final Presentation
- * Name: Milan Kablar, Jonas Cira, Nathan DuPont
- * Created: 2/9/2020
+ * Customer - Final Presentation
+ * Name: Nathan DuPont, Jonas Cira, Milan Kablar
+ * Created: 2/12/2020
  */
 
 package application;
@@ -23,13 +23,21 @@ public class Customer {
     private String phone;
     private Country country;
     private Vehicle vehicle;
-
-    public Customer(int id, String firstName, String lastName, String email,
-                    String phone, Country country, Vehicle vehicle) {
+    
+    /**
+     * Constructor for Customer object
+     * @param id id of customer
+     * @param firstName first name of customer
+     * @param lastName last name of customer
+     * @param phone phone number of customer
+     * @param country country of customer
+     * @param vehicle vehicle that customer purchased
+     */
+    public Customer(int id, String firstName, String lastName, String phone,
+                    Country country, Vehicle vehicle) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.email = email;
         this.phone = phone;
         this.country = country;
         this.vehicle = vehicle;
