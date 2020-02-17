@@ -77,6 +77,7 @@ public class FieldFactory {
      * @return
      */
     public static Field getVehicle(String make, String modelName, String year){
+        // sets take as the key
         String fullVehicleString = make + modelName + year;
         Vehicle vehicle = (Vehicle)vehicleMap.get(fullVehicleString);
 

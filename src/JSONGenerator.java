@@ -1,3 +1,5 @@
+package application;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -8,41 +10,41 @@ import java.util.Arrays;
 public class JSONGenerator {
     public static void main(String[] args) throws IOException {
 
-        ArrayList<String> lastNames = new ArrayList<>(
-                Arrays.asList("Smith","Johnson","Williams","Jones","Brown","Davis","Miller","Wilson","Moore","Taylor",
-                        "Anderson","Thomas","Jackson","White","Harris","Martin","Thompson","Garcia","Martinez","Clark"));
-        ArrayList<String> firstNames = new ArrayList<>(
-                Arrays.asList("James","John","Robert","Michael","William","David","Richard","Charles","Joseph","Chris",
-                        "Mary","Patricia","Linda","Barbara","Elizabeth","Jennifer","Maria","Susan","Margaret","Lisa"));
-        ArrayList<String> countryNames = new ArrayList<>(
-                Arrays.asList("China","India","United States","Mexico","Brazil","Russia","Germany","France","Italy","Poland"));
-       /*
-        ArrayList<String> provinceNames = new ArrayList<>(
-                Arrays.asList(["Gansu","Fujian","Henan"],["Bihar","Goa","Assam"],["California","Illinois","Wisconsin"],["Mexico"],"Brazil","Russia","Germany","France","Italy","Poland"));
+        String[] lastNames = {"Smith","Johnson","Williams","Jones","Brown","Davis","Miller","Wilson","Moore","Taylor",
+                "Anderson","Thomas","Jackson","White","Harris","Martin","Thompson","Garcia","Martinez","Clark"};
+        String[] firstNames = {"James","John","Robert","Michael","William","David","Richard","Charles","Joseph","Chris",
+                "Mary","Patricia","Linda","Barbara","Elizabeth","Jennifer","Maria","Susan","Margaret","Lisa"};
+        String[] countryNames = {"China","India","United States","Mexico","Brazil","Russia","Germany","France","Italy","Poland"};
+        String[][] provinceNames = {{"Gansu","Fujian","Henan"},{"Bihar","Goa","Assam"},{"California","Illinois","Wisconsin"},
+                {"Campeche","Guerrero","Sonora"},{"Para","Amapa","Bahia"},{"Moscow","Vladmi","Penza"},{"Bavaria","Saarland","Hamburg"},
+                {"Normandy","Picardy","Brittany"},{"Asti","Bari","Grosseto"},{"Opole","Masovia","Lubusz"}};
+        String[] cityNames = {"Jonastown","Nathantopia","Milanville"};
+        String[] vehicleMakes = {"Ford","Chevy","Toyota","Nissan","Lincoln","Honda","Dodge","Volkswagen","Fiat","Tesla"};
+        String[] vehicleModels = {"Mustang","Silverado","Camry","Skyline GTR","MKZ","Civic","Challenger","Beetle","500","Roadster"};
+
 
         PrintWriter out = new PrintWriter(new FileWriter("response.json"));
+
         StringBuilder sb = new StringBuilder("{\n" +
                 "  \"status\": \"\",\n" +
                 "\n" +
                 "  \"data\": {\n" +
-                "    \"posts\": [");
+                "    \"posts\": ["
+        );
 
         for(int i = 0; i < 200000; i++) {
-            String lastName;
-            String firstName;
-            String phoneNumber;
-            String countryName;
-            String countryISO;
-            String province;
-            String cityName;
-            String cityZip;
-            String stateName;
-            String stateAbbr;
-            String vehicleMake;
-            String vehicleModel;
-            String vehicleYear;
-
-
+            System.out.println(i);
+            String lastName = lastNames[((int) (Math.random()*20))];
+            String firstName = firstNames[(int) (Math.random()*20)];
+            String phoneNumber = Double.toString((int) (Math.random()*1000000000));
+            int countryNum = (int) (Math.random()*10);
+            String countryName = countryNames[countryNum];
+            String provinceName = provinceNames[countryNum][(int) (Math.random()*3)];
+            String cityName = cityNames[(int) (Math.random()*3)];
+            int vehicleNum = (int) (Math.random()*10);
+            String vehicleMake = vehicleMakes[vehicleNum];
+            String vehicleModel = vehicleModels[vehicleNum];
+            String vehicleYear = Integer.toString((int) (Math.random()*70 + 1950));
 
             sb.append("{\n" +
                     "        \"id\": 1,\n" +
@@ -52,15 +54,12 @@ public class JSONGenerator {
                     "        \"location\": {\n" +
                     "          \"country\": {\n" +
                     "            \"name\": \""+countryName+"\",\n" +
-                    "            \"iso_code\": \""+countryISO+"\"\n" +
                     "          },\n" +
                     "          \"state\": {\n" +
-                    "            \"name\": \""+stateName+"\",\n" +
-                    "            \"abbr\": \""+stateAbbr+"\"\n" +
+                    "            \"name\": \""+provinceName+"\",\n" +
                     "          },\n" +
                     "          \"city\": {\n" +
                     "            \"name\": \""+cityName+"\",\n" +
-                    "            \"zip_code\": \""+cityZip+"\"\n" +
                     "          }\n" +
                     "        },\n" +
                     "        \"vehicle\": {\n" +
@@ -68,9 +67,11 @@ public class JSONGenerator {
                     "          \"model\": \""+vehicleModel+"\",\n" +
                     "          \"year\": \""+vehicleYear+"\"\n" +
                     "        }\n" +
-                    "      },");
-
+                    "      },"
+            );
         }
-        */
+
+        out.write(sb.toString());
+        out.close();
     }
 }
