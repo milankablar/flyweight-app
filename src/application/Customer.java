@@ -19,13 +19,20 @@ public class Customer {
     private int id;
     private String firstName;
     private String lastName;
+    private String email;
     private String phone;
     private Country country;
     private Vehicle vehicle;
 
-    public Customer(int id, String firstName, String lastName, String phone,
-                    Country country, Vehicle vehicle) {
-
+    public Customer(int id, String firstName, String lastName, String email,
+                    String phone, Country country, Vehicle vehicle) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phone = phone;
+        this.country = country;
+        this.vehicle = vehicle;
     }
 
     public int getId() {
@@ -38,6 +45,10 @@ public class Customer {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
     public String getPhone() {

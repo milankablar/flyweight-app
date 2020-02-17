@@ -27,7 +27,7 @@ public class JSONUtil {
 
     }
 
-    private JSONObject readFileToJSONObject(String uri) throws IOException, ParseException {
+    public JSONObject readFileToJSONObject(String uri) throws IOException, ParseException {
         return (JSONObject)(new JSONParser().parse(new FileReader(uri)));
     }
 
@@ -46,8 +46,9 @@ public class JSONUtil {
                 long id = (Long)c.get("id");
                 String firstName = (String)c.get("first_name");
                 String lastName = (String)c.get("last_name");
+                String email = (String)c.get("email");
                 String phoneNumber = (String)c.get("phone_number");
-                System.out.println(id + ": " + firstName + " " + lastName);
+
             }
         } catch (IOException | ParseException e) {
             System.out.println(e.getClass());

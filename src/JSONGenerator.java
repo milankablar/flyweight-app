@@ -16,6 +16,7 @@ public class JSONGenerator {
                         "Mary","Patricia","Linda","Barbara","Elizabeth","Jennifer","Maria","Susan","Margaret","Lisa"));
         ArrayList<String> countryNames = new ArrayList<>(
                 Arrays.asList("China","India","United States","Mexico","Brazil","Russia","Germany","France","Italy","Poland"));
+       /*
         ArrayList<String> provinceNames = new ArrayList<>(
                 Arrays.asList(["Gansu","Fujian","Henan"],["Bihar","Goa","Assam"],["California","Illinois","Wisconsin"],["Mexico"],"Brazil","Russia","Germany","France","Italy","Poland"));
 
@@ -68,6 +69,8 @@ public class JSONGenerator {
                     "          \"year\": \""+vehicleYear+"\"\n" +
                     "        }\n" +
                     "      },");
+
         }
+        */
     }
 }
