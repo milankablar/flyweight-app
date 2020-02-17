@@ -23,7 +23,7 @@ public class Customer {
     private String phone;
     private Country country;
     private Vehicle vehicle;
-    
+
     /**
      * Constructor for Customer object
      * @param id id of customer
