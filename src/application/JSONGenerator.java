@@ -60,7 +60,7 @@ public class JSONGenerator {
             int vehicleNum = (int) (Math.random()*10);
             String vehicleMake = vehicleMakes[vehicleNum];
             String vehicleModel = vehicleModels[vehicleNum];
-            String vehicleYear = Integer.toString((int) (Math.random()*70 + 1950));
+            String vehicleYear = Integer.toString((int) (Math.random()*20 + 2000));
 
             sb.append("      {\n" +
                     "        \"id\": " + i + ",\n" +
