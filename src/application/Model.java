@@ -7,7 +7,7 @@ public class Model implements Field{
         this.modelName = modelName;
     }
 
-    private String getModelName(){
+    public String getModelName(){
         return modelName;
     }
 }

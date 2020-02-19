@@ -36,7 +36,9 @@ public class Customer {
      * @param email email of the customer
      * @param phone phone number of customer
      * @param country country of customer
-     * @param vehicle vehicle that customer purchased
+     * @param make make of the vehicle
+     * @param model model of the vehicle
+     * @param year year of the vehicle
      */
     public Customer(long id, String firstName, String lastName, String email,
                     String phone, Field city, Field province, Field country,
@@ -84,10 +86,6 @@ public class Customer {
 
     public Field getCountry() {
         return country;
-    }
-
-    public Field getVehicle() {
-        return vehicle;
     }
 
     public Field getMake() {

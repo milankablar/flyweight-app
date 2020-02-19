@@ -7,7 +7,7 @@ public class Make implements Field{
         this.makeName = makeName;
     }
 
-    private String getMakeName(){
+    public String getMakeName(){
         return makeName;
     }
 }

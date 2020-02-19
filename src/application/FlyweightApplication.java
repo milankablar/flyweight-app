@@ -36,11 +36,13 @@ public class FlyweightApplication implements Application {
             int counter = 0;
 
             for (Customer customer : customerList) {
-                Vehicle vehicle = (Vehicle)customer.getVehicle();
+                Make make = (Make)customer.getMake();
+                Model model = (Model)customer.getModel();
+                Year year = (Year)customer.getYear();
 
-                if (vehicle.getMake().equals(RECALL_MAKE) &&
-                    vehicle.getModel().equals(RECALL_MODEL) &&
-                    vehicle.getYear().equals(RECALL_YEAR)) {
+                if (make.getMakeName().equals(RECALL_MAKE) &&
+                    model.getModelName().equals(RECALL_MODEL) &&
+                    year.getYear().equals(RECALL_YEAR)) {
                     System.out.println("Emailing " + customer.getFirstName() + " " +
                             customer.getLastName() + " at " + customer.getEmail());
                     counter++;

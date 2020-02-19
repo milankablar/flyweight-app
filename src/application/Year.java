@@ -7,7 +7,7 @@ public class Year implements Field{
         this.year = year;
     }
 
-    private String getYear(){
+    public String getYear(){
         return year;
     }
 }
