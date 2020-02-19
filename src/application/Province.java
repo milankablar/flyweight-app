@@ -29,8 +29,4 @@ public class Province implements Field {
     public String getName(){
         return name;
     }
-
-    public String toString(){
-        return "province:" +name;
-    }
 }

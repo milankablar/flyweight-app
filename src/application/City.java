@@ -17,8 +17,6 @@ package application;
  */
 public class City implements Field {
     private String cityName;
-    private String zipCode;
-    private String addOn;
 
     /**
      * Constructor for a City object, only assigns the name initially, other properties are assigned later
@@ -30,22 +28,6 @@ public class City implements Field {
 
     public String getCityName() {
         return cityName;
-    }
-
-    public String getZipCode() {
-        return zipCode;
-    }
-
-    public String getAddOn() {
-        return addOn;
-    }
-
-    public void setZipCode(String zipCode){
-        this.zipCode = zipCode;
-    }
-
-    public void setAddOn(String addOn){
-        this.addOn = addOn;
     }
 }
 
