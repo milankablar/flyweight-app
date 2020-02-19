@@ -24,7 +24,9 @@ public class Customer {
     private Field city;
     private Field province;
     private Field country;
-    private Field vehicle;
+    private Field make;
+    private Field model;
+    private Field year;
 
     /**
      * Constructor for Customer object
@@ -38,7 +40,7 @@ public class Customer {
      */
     public Customer(long id, String firstName, String lastName, String email,
                     String phone, Field city, Field province, Field country,
-                    Field vehicle) {
+                    Field make, Field model, Field year) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -47,7 +49,9 @@ public class Customer {
         this.city = city;
         this.province = province;
         this.country = country;
-        this.vehicle = vehicle;
+        this.make = make;
+        this.model = model;
+        this.year = year;
     }
 
     public long getId() {
@@ -84,5 +88,17 @@ public class Customer {
 
     public Field getVehicle() {
         return vehicle;
+    }
+
+    public Field getMake() {
+        return make;
+    }
+
+    public Field getModel() {
+        return model;
+    }
+
+    public Field getYear() {
+        return year;
     }
 }
