@@ -67,18 +67,26 @@ public class JSONUtil {
             Field cityObj;
             Field provinceObj;
             Field countryObj;
-            Field vehicleObj;
+            Field makeObj;
+            Field modelObj;
+            Field yearObj;
 
             if (isOptimized) {
                 cityObj = FieldFactory.getCity(cityName);
                 provinceObj = FieldFactory.getProvince(provinceName);
                 countryObj = FieldFactory.getCountry(countryName);
-                vehicleObj = FieldFactory.getVehicle(vehicleMake, vehicleModel, vehicleYear);
+                makeObj = FieldFactory.getMake(vehicleMake);
+                modelObj = FieldFactory.getModel(vehicleModel);
+                yearObj = FieldFactory.getYear(vehicleYear);
+                //vehicleObj = FieldFactory.getVehicle(vehicleMake, vehicleModel, vehicleYear);
             } else {
                 cityObj = new City(cityName);
                 provinceObj = new Province(provinceName);
                 countryObj = new Country(countryName);
-                vehicleObj = new Vehicle(vehicleMake, vehicleModel, vehicleYear);
+                makeObj = new Make(vehicleMake);
+                modelObj = new Model(vehicleModel);
+                yearObj = new Year(vehicleYear);
+                //vehicleObj = new Vehicle(vehicleMake, vehicleModel, vehicleYear);
             }
 
             customerObj = new Customer(id,
@@ -89,7 +97,9 @@ public class JSONUtil {
                     cityObj,
                     provinceObj,
                     countryObj,
-                    vehicleObj);
+                    makeObj,
+                    modelObj,
+                    yearObj);
 
             customerList.add(customerObj);
         }
