@@ -9,25 +9,21 @@
 package application;
 
 /**
- * SE2811-051 Winter 2019-2020
- * City purpose:
- *
- * @author dupontn
- * @version created on 2/9/2020 at 8:40 PM
+ * Creates City objects
  */
 public class City implements Field {
-    private String cityName;
+    private String name;
 
     /**
-     * Constructor for a City object, only assigns the name initially, other properties are assigned later
-     * @param cityName name of city
+     * Constructor for a City object with only contains a name property
+     * @param name name of city
      */
-    public City(String cityName){
-        this.cityName = cityName;
+    public City(String name){
+        this.name = name;
     }
 
     public String getCityName() {
-        return cityName;
+        return name;
     }
 }
 

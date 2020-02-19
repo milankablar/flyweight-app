@@ -11,11 +11,7 @@ package application;
 import java.util.HashMap;
 
 /**
- * SE2811-051 Winter 2019-2020
- * FieldFactory purpose:
- *
- * @author ciraj
- * @version created on 2/12/2020 at 2:18 PM
+ * Creates the HashMaps used by the factory methods, and implements said factory methods
  */
 public class FieldFactory {
     // initializes the HashMaps that will work with the factories to limit memory use
@@ -29,8 +25,8 @@ public class FieldFactory {
 
     /**
      * Factory for City objects
-     * @param name
-     * @return
+     * @param name name of city
+     * @return reference to City object
      */
     public static Field getCity(String name){
         City city = (City)cityMap.get(name);
@@ -44,8 +40,8 @@ public class FieldFactory {
 
     /**
      * Factory for Country objects
-     * @param name
-     * @return
+     * @param name name of country
+     * @return reference to Country object
      */
     public static Field getCountry(String name){
         Country country = (Country)countryMap.get(name);
@@ -59,8 +55,8 @@ public class FieldFactory {
 
     /**
      * Factory for Province objects
-     * @param name
-     * @return
+     * @param name name of province
+     * @return reference to Province object
      */
     public static Field getProvince(String name){
         Province province = (Province)provinceMap.get(name);
@@ -73,28 +69,9 @@ public class FieldFactory {
     }
 
     /**
-     *
-     * @param make
-     * @param modelName
-     * @param year
-     * @return
-     */
-    public static Field getVehicle(String make, String modelName, String year){
-        // sets take as the key
-        String fullVehicleString = make + modelName + year;
-        Vehicle vehicle = (Vehicle)vehicleMap.get(fullVehicleString);
-
-        if(vehicle == null){
-            vehicle = new Vehicle(make, modelName, year);
-            vehicleMap.put(fullVehicleString, vehicle);
-        }
-        return vehicle;
-    }
-
-    /**
-     * 
-     * @param makeName
-     * @return
+     * Factory for Make objects
+     * @param makeName name of make
+     * @return reference to Make object
      */
     public static Field getMake(String makeName){
         Make make = (Make)makeMap.get(makeName);
@@ -108,9 +85,9 @@ public class FieldFactory {
     }
 
     /**
-     *
-     * @param modelName
-     * @return
+     * Factory for Model
+     * @param modelName name of Model
+     * @return reference to Model object
      */
     public static Field getModel(String modelName){
         Model model = (Model)modelMap.get(modelName);
@@ -124,9 +101,9 @@ public class FieldFactory {
     }
 
     /**
-     *
-     * @param yearName
-     * @return
+     * Factory for Year
+     * @param yearName year
+     * @return reference to Year object
      */
     public static Field getYear(String yearName){
         Year year = (Year)yearMap.get(yearName);
