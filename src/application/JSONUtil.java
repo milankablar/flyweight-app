@@ -19,7 +19,8 @@ import java.util.List;
 
 /**
  * SE2811-051 Winter 2019-2020
- * JSONUtil purpose:
+ * JSONUtil purpose: Provide utilities for parsing JSON, as well as transcribing
+ * it to customer objects to store the data
  *
  * @author dupontn
  * @version created on 2/14/2020 at 12:25 AM
