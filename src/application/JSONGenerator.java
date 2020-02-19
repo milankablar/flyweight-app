@@ -3,11 +3,28 @@ package application;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Arrays;
 
-// https://howtodoinjava.com/library/json-simple-read-write-json-examples/
 public class JSONGenerator {
+    private static final int CUSTOMER_OBJECTS = 1252354;
+
+    private static int getSingleDigitInt() {
+        return (int)(Math.random() * 10) % 10;
+    }
+
+    private static String getPhoneNumber() {
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < 10; i++) {
+            sb.append(getSingleDigitInt());
+        }
+
+        return sb.toString();
+    }
+
+    private static String getEmailAddress(String firstName, String lastName) {
+        return firstName + "_" + lastName + "@gmail.com";
+    }
+
     public static void main(String[] args) throws IOException {
 
         String[] lastNames = {"Smith","Johnson","Williams","Jones","Brown","Davis","Miller","Wilson","Moore","Taylor",
@@ -26,17 +43,16 @@ public class JSONGenerator {
         PrintWriter out = new PrintWriter(new FileWriter("response.json"));
 
         StringBuilder sb = new StringBuilder("{\n" +
-                "  \"status\": \"\",\n" +
-                "\n" +
+                "  \"status\": \"success\",\n" +
                 "  \"data\": {\n" +
-                "    \"posts\": ["
+                "    \"posts\": [\n"
         );
 
-        for(int i = 0; i < 200000; i++) {
+        for(int i = 0; i < CUSTOMER_OBJECTS; i++) {
             System.out.println(i);
             String lastName = lastNames[((int) (Math.random()*20))];
             String firstName = firstNames[(int) (Math.random()*20)];
-            String phoneNumber = Double.toString((int) (Math.random()*1000000000));
+            String phoneNumber = getPhoneNumber();
             int countryNum = (int) (Math.random()*10);
             String countryName = countryNames[countryNum];
             String provinceName = provinceNames[countryNum][(int) (Math.random()*3)];
@@ -46,30 +62,39 @@ public class JSONGenerator {
             String vehicleModel = vehicleModels[vehicleNum];
             String vehicleYear = Integer.toString((int) (Math.random()*70 + 1950));
 
-            sb.append("{\n" +
-                    "        \"id\": 1,\n" +
+            sb.append("      {\n" +
+                    "        \"id\": " + i + ",\n" +
                     "        \"last_name\": \""+lastName+"\",\n" +
                     "        \"first_name\": \""+firstName+"\",\n" +
+                    "        \"email\": \"" + getEmailAddress(firstName, lastName) + "\",\n" +
                     "        \"phone_number\": \""+phoneNumber+"\",\n" +
                     "        \"location\": {\n" +
                     "          \"country\": {\n" +
-                    "            \"name\": \""+countryName+"\",\n" +
+                    "            \"name\": \""+countryName+"\"\n" +
                     "          },\n" +
-                    "          \"state\": {\n" +
-                    "            \"name\": \""+provinceName+"\",\n" +
+                    "          \"province\": {\n" +
+                    "            \"name\": \""+provinceName+"\"\n" +
                     "          },\n" +
                     "          \"city\": {\n" +
-                    "            \"name\": \""+cityName+"\",\n" +
+                    "            \"name\": \""+cityName+"\"\n" +
                     "          }\n" +
                     "        },\n" +
                     "        \"vehicle\": {\n" +
                     "          \"make\": \""+vehicleMake+"\",\n" +
                     "          \"model\": \""+vehicleModel+"\",\n" +
                     "          \"year\": \""+vehicleYear+"\"\n" +
-                    "        }\n" +
-                    "      },"
-            );
+                    "        }\n");
+
+            if (i == CUSTOMER_OBJECTS - 1) {
+                sb.append("      }\n");
+            } else {
+                sb.append("      },\n");
+            }
         }
+
+        sb.append("    ]\n");
+        sb.append("  }\n");
+        sb.append("}");
 
         out.write(sb.toString());
         out.close();
