@@ -23,6 +23,9 @@ public class FieldFactory {
     private static final HashMap countryMap = new HashMap();
     private static final HashMap provinceMap = new HashMap();
     private static final HashMap vehicleMap = new HashMap();
+    private static final HashMap makeMap = new HashMap();
+    private static final HashMap modelMap = new HashMap();
+    private static final HashMap yearMap = new HashMap();
 
     /**
      * Factory for City objects
@@ -86,5 +89,53 @@ public class FieldFactory {
             vehicleMap.put(fullVehicleString, vehicle);
         }
         return vehicle;
+    }
+
+    /**
+     * 
+     * @param makeName
+     * @return
+     */
+    public static Field getMake(String makeName){
+        Make make = (Make)makeMap.get(makeName);
+
+        if(make == null){
+            make = new Make(makeName);
+            makeMap.put(makeName, make);
+        }
+
+        return make;
+    }
+
+    /**
+     *
+     * @param modelName
+     * @return
+     */
+    public static Field getModel(String modelName){
+        Model model = (Model)modelMap.get(modelName);
+
+        if(model == null){
+            model = new Model(modelName);
+            modelMap.put(modelName, model);
+        }
+
+        return model;
+    }
+
+    /**
+     *
+     * @param yearName
+     * @return
+     */
+    public static Field getYear(String yearName){
+        Year year = (Year)yearMap.get(yearName);
+
+        if(year == null){
+            year = new Year(yearName);
+            yearMap.put(yearName, year);
+        }
+
+        return year;
     }
 }
