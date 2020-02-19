@@ -10,7 +10,7 @@ package application;
 
 /**
  * SE2811-051 Winter 2019-2020
- * Province purpose:
+ * Province purpose: Hold data for a specific province
  *
  * @author dupontn
  * @version created on 2/9/2020 at 8:40 PM

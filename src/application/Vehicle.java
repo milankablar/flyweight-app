@@ -10,7 +10,7 @@ package application;
 
 /**
  * SE2811-051 Winter 2019-2020
- * Vehicle purpose:
+ * Vehicle purpose: Hold details for a vehicle object
  *
  * @author dupontn
  * @version created on 2/12/2020 at 2:20 PM

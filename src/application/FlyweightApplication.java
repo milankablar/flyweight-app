@@ -16,9 +16,11 @@ import java.util.List;
 
 /**
  * SE2811-051 Winter 2019-2020
- * Application purpose: // TODO
+ * Application purpose: Based off of the arguments in the Application Interface,
+ * search through a provided list of customers (in JSON format) and email customers
+ * which have a vehicle currently being recalled
  *
- * @author // TODO
+ * @author Nathan DuPont
  * @version created on 2/9/2020 at 8:11 PM
  */
 public class FlyweightApplication implements Application {
